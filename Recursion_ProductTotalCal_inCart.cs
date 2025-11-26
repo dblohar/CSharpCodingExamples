@@ -42,47 +42,36 @@ public class HelloWorld
         Console.WriteLine(total);
     }
     
-static double Calculate(string name,int qty)
+static double Calculate(string name, int qty)
 {
-    if(name == "A")
+    if (name == "A") // Apple
     {
-    if(qty>=3)
-    {
-        return 3 * 25 + Calculate(name,qty-3);
-    }
-    else if(qty>=2)
-    {
-        return 2 * 16 +Calculate(name,qty-2);
-    }
-    else if(qty >= 1)
-    {
-        
-        return 1 * 10 + Calculate(name,qty-1);
-    }
-    else
-     return 0;
-    }
-    else if(name == "B")
-    {
-    if(qty>=3)
-    {
-        return 3 * 12 + Calculate(name,qty-3);
-    }
-    else if(qty>=2)
-    {
-        return 2 * 6 +Calculate(name,qty-2);
-    }
-    else if(qty >= 1)
-    {
-        
-        return 1 * 5 + Calculate(name,qty-1);
-    }
-    else
-     return 0;
-    }
-    else
+        if (qty >= 3)
+            return 25 + Calculate(name, qty - 3);
+
+        if (qty >= 2)
+            return 16 + Calculate(name, qty - 2);
+
+        if (qty >= 1)
+            return 10 + Calculate(name, qty - 1);
+
         return 0;
-    
+    }
+    else if (name == "B") // Orange
+    {
+        if (qty >= 3)
+            return 12 + Calculate(name, qty - 3);
+
+        if (qty >= 2)
+            return 6 + Calculate(name, qty - 2);
+
+        if (qty >= 1)
+            return 5 + Calculate(name, qty - 1);
+
+        return 0;
+    }
+
+    return 0;
 }
 }
 
